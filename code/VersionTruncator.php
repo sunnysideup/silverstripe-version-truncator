@@ -16,17 +16,13 @@
 
 class VersionTruncator extends SiteTreeExtension {
 
-	protected static $version_limit = 10;
-		static function set_version_limit($v) {self::$version_limit = $v;}
+	private static $version_limit = 10;
 
-	protected static $draft_limit = 5;
-		static function set_draft_limit($v) {self::$draft_limit = $v;}
+	private static $draft_limit = 5;
 
-	protected static $vacuum_tables = false;
-		static function set_vacuum_tables($v) {self::$vacuum_tables = $v;}
+	private static $vacuum_tables = false;
 
-	protected static $delete_old_page_types = false;
-		static function set_delete_old_page_types($v) {self::$delete_old_page_types = $v;}
+	private static $delete_old_page_types = false;
 
 	/*
 	 * Automatically invoked with any save() on a SiteTree object
